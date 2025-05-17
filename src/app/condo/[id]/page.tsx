@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Condominium } from "../../components/condominium";
+import { Condo } from "../../types/condo";
 
 interface PageProps {
   params: {
@@ -20,13 +22,15 @@ export default async function Page({ params }: PageProps) {
     // If the section is not found, return a 404 page
     notFound();
   }
-  const residential = [
-    { id: "123", name: "Residential 123" },
-    { id: "2", name: "Residential 2" },
-    { id: "3", name: "Residential 3" },
-  ];
+  const response = await fetch("http://localhost:3000/api/condos", {
+    cache: "no-store", // Don't cache the response
+  });
 
-  const residentialProperty = residential?.find((res) => res.id === id);
+  if (!response.ok) {
+    throw new Error("Failed to fetch condo listings");
+  }
+  const condoListings: Condo[] = await response.json();
+  const condo = condoListings.find((condo) => condo.id === +id);
 
   return (
     <div>
@@ -38,8 +42,11 @@ export default async function Page({ params }: PageProps) {
       </Link>
       <div className="p-4">
         <h2 className="text-lg font-bold">Residential Property Details</h2>
-        <p>ID: {residentialProperty?.id}</p>
-        <p>Name: {residentialProperty?.name}</p>
+        {condo && (
+          <div className="mt-4 max-w-[400px]">
+            <Condominium condo={condo} />
+          </div>
+        )}
       </div>
       {/* Add more content or components here */}
     </div>

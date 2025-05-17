@@ -22,10 +22,10 @@ export default function Home() {
           </Link>
 
           <Link
-            href="/residential/123"
+            href="/condo/2"
             className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
           >
-            View Residential with URL Param
+            View condo with URL Param
           </Link>
         </div>
       </div>
