@@ -9,16 +9,23 @@ export default function Home() {
         <p>This is the main page of the application.</p>
         <div className="flex gap-4">
           <Link
-            href="/condo"
+            href="/condo-server"
             className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
           >
-            View Condos
+            View Condos - server side
           </Link>
+          <Link
+            href="/condo-client"
+            className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            View Condos - client side
+          </Link>
+
           <Link
             href="/residential/123"
             className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
           >
-            View Residential
+            View Residential with URL Param
           </Link>
         </div>
       </div>

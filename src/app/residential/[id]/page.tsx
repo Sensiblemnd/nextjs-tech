@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 interface PageProps {
@@ -18,6 +19,12 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <div>
+      <Link
+        href="/"
+        className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+      >
+        Back to Home
+      </Link>
       <div className="p-4">
         <h2 className="text-lg font-bold">Residential ID: {id}</h2>
         <p>Details about the residential property with ID: {id}</p>
