@@ -40,3 +40,14 @@ export function GET() {
     headers: { "Content-Type": "application/json" },
   });
 }
+
+export async function POST(request: Request) {
+  // Handle POST request
+  const data = await request.json();
+  const { id } = data;
+  const condo = condoListings.find((listing) => listing.id === +id);
+  // Process the data
+  return new Response(JSON.stringify(condo ?? null), {
+    headers: { "Content-Type": "application/json" },
+  });
+}

@@ -4,6 +4,7 @@ import { Condominium } from "../components/condominium";
 import { Condo } from "../types/condo";
 
 export default async function CondoPage() {
+  //server side fetch needs full url to do this right create soke sort of env variable dev / prod
   const response = await fetch("http://localhost:3000/api/condos", {
     cache: "no-store", // Don't cache the response
   });

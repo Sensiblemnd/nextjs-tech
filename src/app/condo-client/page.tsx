@@ -12,7 +12,7 @@ export default function CondoPage() {
   // This should be done in a useEffect hook in a real application
   useEffect(() => {
     const fetchCondos = async () => {
-      const response = await fetch("http://localhost:3000/api/condos", {
+      const response = await fetch("/api/condos", {
         cache: "no-store", // Don't cache the response
       });
 
