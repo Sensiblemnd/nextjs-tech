@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
-    ],
+    ], // Allows Next.js to optimize and serve external images from images.unsplash.com domain
   },
 };
 
