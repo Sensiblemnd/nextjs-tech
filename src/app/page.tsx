@@ -27,6 +27,13 @@ export default function Home() {
           >
             View condo with URL Param
           </Link>
+
+          <Link
+            href="/condo/post"
+            className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            View condo with Form POST/Route
+          </Link>
         </div>
       </div>
     </div>
