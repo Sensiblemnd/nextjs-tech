@@ -1,41 +1,99 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
-      <div>My App home</div>
-      <div className="p-4">
-        <h2 className="text-lg font-bold">Welcome to the Home Page</h2>
-        <p>This is the main page of the application.</p>
-        <div className="flex gap-4">
-          <Link
-            href="/condo-server"
-            className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-          >
-            View Condos - server side
-          </Link>
-          <Link
-            href="/condo-client"
-            className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-          >
-            View Condos - client side
-          </Link>
-
-          <Link
-            href="/condo/2"
-            className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-          >
-            View condo with URL Param
-          </Link>
-
-          <Link
-            href="/condo/post"
-            className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-          >
-            View condo with Form POST/Route
-          </Link>
+    <div className="min-h-screen flex flex-col">
+      {/* Hero Section */}
+      <div className="">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex flex-col justify-center">
+              <h1 className="text-3xl font-medium text-white mb-4">
+                Find Your Perfect Condo
+              </h1>
+              <p className="text-lg text-white mb-6">
+                Explore our curated selection of premium condominiums in
+                desirable locations. Whether youre looking for modern urban
+                living or a peaceful retreat, we have options for you.
+              </p>
+              <div>
+                <Link
+                  href="/condo-server"
+                  className="inline-block bg-blue-600 text-white px-5 py-3 rounded hover:bg-blue-700 transition-colors"
+                >
+                  Browse Available Condos
+                </Link>
+              </div>
+            </div>
+            <div className="bg-gray-200 overflow-hidden rounded-lg min-h-[280px] relative h-48 w-full">
+              <Image
+                src={"https://picsum.photos/800/300?random=2"}
+                alt={"Condo Image"}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Main Content */}
+      <main className="flex-grow">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <h2 className="text-2xl font-medium text-white mb-6">
+            Explore Listing Options
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="border border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors">
+              <h3 className="font-medium mb-2">Server-Side Listings</h3>
+
+              <Link
+                href="/condo-server"
+                className="text-sm inline-block bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700"
+              >
+                View Condos - server side
+              </Link>
+            </div>
+
+            <div className="border border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors">
+              <h3 className="font-medium mb-2">Client-Side Listings</h3>
+
+              <Link
+                href="/condo-client"
+                className="text-sm inline-block bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700"
+              >
+                View Condos - client side
+              </Link>
+            </div>
+
+            <div className="border border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors">
+              <h3 className="font-medium mb-2">Featured Condo</h3>
+
+              <Link
+                href="/condo/2"
+                className="text-sm inline-block bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700"
+              >
+                View condo Dynamic Routes
+              </Link>
+            </div>
+
+            <div className="border border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors">
+              <h3 className="font-medium mb-2">Request Information</h3>
+
+              <Link
+                href="/condo/post"
+                className="text-sm inline-block bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700"
+              >
+                View condo with Form POST/Route
+              </Link>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }

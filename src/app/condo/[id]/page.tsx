@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Condominium } from "../../components/condominium";
 import { Condo } from "../../types/condo";
@@ -15,7 +14,8 @@ export default async function Page({ params }: PageProps) {
   // linting will say this is wrong but it is correct
   //you can use Promise.resolve to convert it to a promise
   // const params = await Promise.resolve(params);
-
+  // If you want to do URL's query string.
+  //https://nextjs.org/docs/app/api-reference/functions/use-search-params
   const { id } = await params;
 
   if (!id) {
@@ -33,15 +33,11 @@ export default async function Page({ params }: PageProps) {
   const condo = condoListings.find((condo) => condo.id === +id);
 
   return (
-    <div>
-      <Link
-        href="/"
-        className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-      >
-        Back to Home
-      </Link>
-      <div className="p-4">
-        <h2 className="text-lg font-bold">Residential Property Details</h2>
+    <>
+      <div className="min-h-screen p-6">
+        <h1 className="text-3xl font-bold mb-6">
+          Luxury Condo Listings - Dynamic Route ID: {id}
+        </h1>
         {condo && (
           <div className="mt-4 max-w-[400px]">
             <Condominium condo={condo} />
@@ -49,6 +45,6 @@ export default async function Page({ params }: PageProps) {
         )}
       </div>
       {/* Add more content or components here */}
-    </div>
+    </>
   );
 }

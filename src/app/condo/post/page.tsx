@@ -1,7 +1,6 @@
 // example component will make a post on button press and get bac a condo
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { Condominium } from "../../components/condominium";
 import { Condo } from "../../types/condo";
@@ -12,12 +11,6 @@ export default function CondoPage() {
   return (
     <>
       <div className="min-h-screen p-6">
-        <Link
-          href="/"
-          className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-        >
-          Back to Home
-        </Link>
         <div>
           <form
             onSubmit={async (e) => {
@@ -49,7 +42,7 @@ export default function CondoPage() {
               type="submit"
               className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
             >
-              Get Condo Choose 1 ,2 or 3
+              Get Condo Choose 1 - 6
             </button>
           </form>
         </div>

@@ -2,14 +2,13 @@
 const condoListings = [
   {
     id: 1,
-    title: "Skyline Penthouse",
+    title: "Skyline Penthouse -Local Image",
     location: "Downtown, NY",
     price: "$1,250,000",
     bedrooms: 3,
     bathrooms: 2,
     squareFeet: 1800,
-    imageUrl:
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3",
+    imageUrl: "/images/photo.webp",
   },
   {
     id: 2,
@@ -32,6 +31,61 @@ const condoListings = [
     squareFeet: 950,
     imageUrl:
       "https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-4.0.3",
+  },
+  {
+    id: 4,
+    title: "Luxury Condo",
+    location: "Beverly Hills, LA",
+    price: "$2,500,000",
+    bedrooms: 4,
+    bathrooms: 3,
+    squareFeet: 2500,
+    imageUrl:
+      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3",
+  },
+  {
+    id: 5,
+    title: "Cozy Condo",
+    location: "Seattle, WA",
+    price: "$600,000",
+    bedrooms: 1,
+    bathrooms: 1,
+    squareFeet: 700,
+    imageUrl:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3",
+  },
+  {
+    id: 6,
+    title: "Modern Apartment",
+    location: "Austin, TX",
+    price: "$850,000",
+    bedrooms: 2,
+    bathrooms: 2,
+    squareFeet: 1100,
+    imageUrl:
+      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3",
+  },
+  {
+    id: 7,
+    title: "Chic Studio",
+    location: "Miami, FL",
+    price: "$450,000",
+    bedrooms: 1,
+    bathrooms: 1,
+    squareFeet: 500,
+    imageUrl:
+      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3",
+  },
+  {
+    id: 8,
+    title: "Spacious Loft",
+    location: "Boston, MA",
+    price: "$1,100,000",
+    bedrooms: 3,
+    bathrooms: 2,
+    squareFeet: 1600,
+    imageUrl:
+      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3",
   },
 ];
 
