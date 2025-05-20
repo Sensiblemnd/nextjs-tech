@@ -3,9 +3,7 @@ import { Condominium } from "../../components/condominium";
 import { Condo } from "../../types/condo";
 
 interface PageProps {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>;
 }
 
 export default async function Page({ params }: PageProps) {
