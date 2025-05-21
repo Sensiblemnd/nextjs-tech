@@ -40,3 +40,16 @@ div:has(.condo) {
     opacity: 0.5;
   }
 }
+
+.stacked {
+  display: grid;
+  place-items: center;
+
+  h1 {
+    color: white;
+  }
+  & > * {
+    grid-column: 1 / 1;
+    grid-row: 1 /1;
+  }
+}

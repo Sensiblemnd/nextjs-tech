@@ -40,8 +40,7 @@ const condoListings = [
     bedrooms: 4,
     bathrooms: 3,
     squareFeet: 2500,
-    imageUrl:
-      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3",
+    imageUrl: "https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee",
   },
   {
     id: 5,
@@ -51,8 +50,7 @@ const condoListings = [
     bedrooms: 1,
     bathrooms: 1,
     squareFeet: 700,
-    imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3",
+    imageUrl: "https://images.unsplash.com/photo-1560185009-dddeb820c7b7",
   },
   {
     id: 6,
@@ -62,8 +60,7 @@ const condoListings = [
     bedrooms: 2,
     bathrooms: 2,
     squareFeet: 1100,
-    imageUrl:
-      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3",
+    imageUrl: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae",
   },
   {
     id: 7,
@@ -73,8 +70,7 @@ const condoListings = [
     bedrooms: 1,
     bathrooms: 1,
     squareFeet: 500,
-    imageUrl:
-      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3",
+    imageUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
   },
   {
     id: 8,
@@ -84,8 +80,7 @@ const condoListings = [
     bedrooms: 3,
     bathrooms: 2,
     squareFeet: 1600,
-    imageUrl:
-      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3",
+    imageUrl: "https://images.unsplash.com/photo-1560185007-cde436f6a4d0",
   },
 ];
 

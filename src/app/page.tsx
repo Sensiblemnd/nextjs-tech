@@ -5,6 +5,18 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
+      <div className="stacked">
+        <div className="relative h-80 w-full">
+          <Image
+            src={"https://picsum.photos/id/378/1500/300?random=4"}
+            alt={"Hero Image"}
+            fill
+            className="object-fill"
+            sizes="(max-width: 1500px) 100vw, (min-width: 769px) 50vw"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      </div>
       <div className="">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -28,10 +40,10 @@ export default function Home() {
             </div>
             <div className="bg-gray-200 overflow-hidden rounded-lg min-h-[280px] relative h-48 w-full">
               <Image
-                src={"https://picsum.photos/800/300?random=2"}
+                src={"https://picsum.photos/id/503/800/300?random=2"}
                 alt={"Condo Image"}
                 fill
-                className="object-cover"
+                className="transition duration-250 ease-in-out  hover:scale-125 object-cover"
                 sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
                 style={{ objectFit: "cover" }}
               />
