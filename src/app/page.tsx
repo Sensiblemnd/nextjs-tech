@@ -12,7 +12,7 @@ export default function Home() {
             alt={"Hero Image"}
             fill
             className="object-fill"
-            sizes="(max-width: 1500px) 100vw, (min-width: 769px) 50vw"
+            sizes="(max-width: 900px) 100vw, (min-width: 769px) 50vw"
             style={{ objectFit: "cover" }}
           />
         </div>

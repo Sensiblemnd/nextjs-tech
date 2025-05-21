@@ -33,11 +33,15 @@ and the :not() pseudo-class
 */
 div:has(.condo) {
   & > .condo {
-    transition: opacity 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   &:has(> .condo:hover) > .condo:not(:hover) {
     opacity: 0.5;
+  }
+  &:has(> .condo:hover) > .condo:hover {
+    opacity: 1;
+    scale: 1.05;
   }
 }
 
