@@ -24,11 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-//fancy hover opacity effect
-// for condo cards
-// when hovering over one condo card, the others fade out
-// this is done using the :has() pseudo-class
-// and the :not() pseudo-class
+/*
+fancy hover opacity effect
+for condo cards
+when hovering over one condo card, the others fade out
+this is done using the :has() pseudo-class
+and the :not() pseudo-class
+*/
 div:has(.condo) {
   & > .condo {
     transition: opacity 0.3s ease-in-out;
