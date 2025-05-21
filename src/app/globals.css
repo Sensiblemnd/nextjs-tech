@@ -24,3 +24,55 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+div:has(.condo > :hover) .condo:not(:hover) {
+  filter: blur(1px);
+  transition: filter 0.3s ease-in-out;
+}
+.condo {
+  transform: scale(1);
+
+  &:hover {
+    animation: scaleUp 0.3s ease-in-out forwards;
+  }
+
+  &:not(:hover) {
+    animation: scaleDown 0.3s ease-in-out forwards;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes blurOthers {
+  from {
+    filter: blur(0);
+  }
+  to {
+    filter: blur(1px);
+  }
+}
+
+@keyframes unblurOthers {
+  from {
+    filter: blur(1px);
+  }
+  to {
+    filter: blur(0);
+  }
+}

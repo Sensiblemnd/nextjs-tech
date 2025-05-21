@@ -13,10 +13,10 @@ export const Condominium = ({ condo }: CondominiumProps) => {
   }
 
   return (
-    <div>
+    <div className="condo">
       <div
         key={condo.id}
-        className=" rounded-lg shadow-md overflow-hidden border border-gray-200 "
+        className=" rounded-lg shadow-md overflow-hidden border border-gray-700 "
       >
         <div className="relative h-48 w-full">
           <Image
