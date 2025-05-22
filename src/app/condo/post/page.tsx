@@ -1,6 +1,7 @@
 // example component will make a post on button press and get bac a condo
 "use client";
 
+import { notFound } from "next/navigation";
 import { useState } from "react";
 import { Condominium } from "../../components/condominium";
 import { Condo } from "../../types/condo";
@@ -26,9 +27,10 @@ export default function CondoPage() {
                 },
               });
               if (!response.ok) {
-                throw new Error("Failed to fetch condo listings");
+                notFound();
               }
               const condo: Condo | null = await response.json();
+
               setCondo(condo ? condo : null);
             }}
           >
@@ -49,7 +51,7 @@ export default function CondoPage() {
         <div>
           <h1 className="text-3xl font-bold mb-6">Luxury Condo Listings</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {condo && <Condominium condo={condo} />}
+            {condo ? <Condominium condo={condo} /> : <p>No condo found</p>}
           </div>
         </div>
       </div>

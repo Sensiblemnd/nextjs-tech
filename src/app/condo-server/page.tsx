@@ -1,4 +1,5 @@
 "use server";
+import { notFound } from "next/navigation";
 import { Condominium } from "../components/condominium";
 import { Condo } from "../types/condo";
 
@@ -9,7 +10,7 @@ export default async function CondoPage() {
   });
 
   if (!response.ok) {
-    throw new Error("Failed to fetch condo listings");
+    notFound();
   }
   const condoListings: Condo[] = await response.json();
 

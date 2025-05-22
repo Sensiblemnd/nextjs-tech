@@ -25,10 +25,14 @@ export default async function Page({ params }: PageProps) {
   });
 
   if (!response.ok) {
-    throw new Error("Failed to fetch condo listings");
+    notFound();
   }
   const condoListings: Condo[] = await response.json();
   const condo = condoListings.find((condo) => condo.id === +id);
+
+  if (!condo) {
+    notFound();
+  }
 
   return (
     <>
