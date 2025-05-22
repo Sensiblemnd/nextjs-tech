@@ -18,20 +18,20 @@ export default async function Page({ params }: PageProps) {
 
   if (!id) {
     // If the section is not found, return a 404 page
-    notFound();
+    notFound(); // This will trigger the 404 page
   }
   const response = await fetch("http://localhost:3000/api/condos", {
     cache: "no-store", // Don't cache the response
   });
 
   if (!response.ok) {
-    notFound();
+    notFound(); // This will trigger the 404 page
   }
   const condoListings: Condo[] = await response.json();
   const condo = condoListings.find((condo) => condo.id === +id);
 
   if (!condo) {
-    notFound();
+    notFound(); // This will trigger the 404 page
   }
 
   return (

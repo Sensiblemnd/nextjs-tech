@@ -27,7 +27,7 @@ export default function CondoPage() {
                 },
               });
               if (!response.ok) {
-                notFound();
+                notFound(); // This will trigger the 404 page
               }
               const condo: Condo | null = await response.json();
 

@@ -10,7 +10,7 @@ export default async function CondoPage() {
   });
 
   if (!response.ok) {
-    notFound();
+    notFound(); // This will trigger the 404 page
   }
   const condoListings: Condo[] = await response.json();
 
