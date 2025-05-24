@@ -13,3 +13,5 @@ Would you like to use Turbopack for `next dev`?  Yes
 Would you like to customize the import alias (`@/*` by default)?  No
 
 
+client vs server
+

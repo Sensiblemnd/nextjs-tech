@@ -23,6 +23,7 @@ export default function Home() {
             <div className="flex flex-col justify-center">
               <h1 className="text-3xl font-medium text-white mb-4">
                 Find Your Perfect Condo
+                {/* <ButtonClient /> */}
               </h1>
               <p className="text-lg text-white mb-6">
                 Explore our curated selection of premium condominiums in
