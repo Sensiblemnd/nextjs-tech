@@ -25,7 +25,7 @@ src/
     types/               # TypeScript definitions
 ```
 
-## Next.js App Router (5 minutes)
+## Next.js App Router
 
 In our project, we're using the App Router, which was introduced in Next.js 13 and is now the recommended approach:
 
@@ -33,7 +33,7 @@ In our project, we're using the App Router, which was introduced in Next.js 13 a
 
 2. **Server-first approach**: Components are server components by default
 
-## Client vs Server Components Deep Dive (15 minutes)
+## Client vs Server Components Deep Dive
 
 ### Server Components (Demo: `/condo-server`)
 
